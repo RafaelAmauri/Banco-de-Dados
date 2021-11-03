@@ -1,0 +1,73 @@
+Questão 1:
+
+SELECT actors.first_name, actors.last_name
+FROM actors 
+INNER JOIN directors 
+on actors.first_name = directors.first_name 
+and actors.last_name = directors.last_name
+
+=====================================================================
+
+Questão 2:
+
+SELECT actors.first_name, actors.last_name FROM actors
+FULL OUTER JOIN directors
+on actors.first_name = directors.first_name
+and actors.last_name = directors.last_name
+
+=====================================================================
+
+Questão 3:
+
+(SELECT first_name, last_name FROM actors) 
+UNION
+(SELECT first_name, last_name FROM directors)
+
+=====================================================================
+
+Questão 4: 
+
+Select name 
+FROM (
+	(SELECT id FROM movies)
+	EXCEPT 
+	(SELECT movie_id FROM movies_directors)) 
+AS table_1 
+NATURAL JOIN movies 
+WHERE table_1.id=id
+
+=====================================================================
+
+Questão 5:
+
+SELECT first_name, last_name
+FROM (
+		SELECT identificador
+		FROM (
+				SELECT actor_id as identificador, COUNT(movie_id) as a
+				FROM roles
+				GROUP BY actor_id
+			) AS table_2
+		WHERE a < 2
+	) AS table_1 NATURAL JOIN actors
+WHERE id=identificador
+
+=====================================================================
+
+
+
+
+Questão 6:
+
+SELECT genre,year,a
+        FROM (
+        SELECT genre,movie_id, a
+        FROM (
+                    SELECT movie_id as idfilme, COUNT(actor_id) as a
+                    FROM roles
+                    GROUP BY movie_id
+                ) as mov NATURAL JOIN movies_genres
+        WHERE a < 2
+        AND idfilme=movie_id
+    ) AS table_2 NATURAL JOIN movies
+WHERE movie_id=id

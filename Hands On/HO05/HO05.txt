@@ -1,0 +1,23 @@
+1 .
+π first_name,last_name actors ∩ π first_name,last_name directors
+
+2 .
+π first_name,last_name actors - π first_name,last_name directors
+
+3 .
+π first_name,last_name actors ∪ π first_name,last_name directors
+
+4 .
+V1 = directors ⨝ id = director_id movies_directors
+V2 = V1 ⨝ movies_directors.movie_id = movies.id movies
+π name movies - π name V2
+
+5 .
+V1 = π actor_id σ n<2 γ actor_id; count(movie_id) -> n (roles) ⨝ actor_id=id actors
+π first_name,last_name V1
+
+6 .
+V1 = π movie_id, n σ n<2 γ movie_id; count(actor_id) -> n roles
+V2 = π name, year, genre σ id=movie_id (movies⨝V1⨝movies_genres)
+V3 = γ genre, year ; count(genre) -> n V2
+π genre, year, average γ genre,year; avg(n) -> average V3

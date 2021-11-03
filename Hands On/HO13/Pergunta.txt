@@ -1,0 +1,24 @@
+Reescrever as consultas abaixo para maximizar a probabilidade delas serem executadas de maneira eficiente:
+
+SELECT DISTINCT A.CPF, A.Nome
+FROM Funcionarios A
+WHERE A.CPF IN (SELECT CPF_Supervisor FROM Funcionarios)
+AND A.CPF NOT IN (SELECT CPF FROM Clientes)
+
+ 
+SELECT A.CodFilme, B.Nome
+FROM Midias A, Filmes B
+WHERE A.CodFilme = B.Codigo
+AND A.Tipo = "DVD"
+OR A.Tipo = "VHS"
+
+ 
+SELECT A.CPF_Cliente, A.ID_Midia, A.DataLocacao
+FROM Aluguel A, Clientes B
+WHERE A.CPF_Cliente = B.CPF
+AND B.Sexo != "F"
+AND EXISTS (SELECT * FROM Pagamentos C
+WHERE C.CPF_Cliente = A.CPF_Cliente
+AND C.ID_Midia = A.ID_Midia
+AND C.DataLocacao = A.DataLocacao)
+

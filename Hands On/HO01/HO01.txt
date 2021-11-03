@@ -1,0 +1,52 @@
+
+
+1 - Um SBD é uma coleção de dados relacionais, com "dados" sendo entendidos como dados que podem ser gravados e têm significado implícito.
+
+2 - Um banco de dados é composto por dados que se relacionam
+
+3 - Usuários e aplicações interagem com banco de dados por meio de queries SQL
+
+4 - Um banco de dados é uma coleção de dados relacionais. Um exemplo de banco de dados é o MySQL. Link: https://www.mysql.com/
+
+5 -  * Um banco de dados representa algum aspecto do mundo real, às vezes chamado de "miniworld" ou "universe of discourse".
+
+    * Um banco de dados é uma coleção logicamente coerente de dados com um significado. Uma coleção aleatória de dados não pode ser chamada de banco de dados
+
+   * Um banco de dados é montado e populado com dados para um propósito específico.
+
+6 - * Especificação
+    * Análise de requisitos 
+    * Projeto conceitual
+    * Projeto lógico
+    * Projeto físico
+
+7 - Um SGBD são ferramentas que permitem facilmente adicionar, remover, atualizar e ler dados de um banco de dados
+
+8 - Controle de redundância, flexibilidade, economia de escala, alta disponibilidade, tempo de desenvolvimento de aplicação reduzido e capacidade de representação de relacionamento entre dados complexos no banco de dados.
+
+9 - Por causa da forma que um SGBD é feito para auxiliar em problemas gerais, quando operações muito específicas são necessárias, o uso pode se mostrar inadequado. 
+
+10 - Modelos de dados servem para refletir a estrutura do banco de dados e o que o compõe. Inclue ferramentas para inserir, remover, modificar e recuperar.
+
+11 - * Conceitual: maior nível de abstração
+     * Representativo: nível médio de abstração
+     * Físico: nível baixo de abstração
+
+12 - Um esquema é uma descrição do BD em forma de metadados
+
+13 - Uma instância é uma gravação do BD em um momento X. Pode ser entendido como uma cópia dele em um momento determinado.
+
+14 - A arquitetura de três esquemas é uma abordagem que permite a visualização facilitada para o usuário com autodescrição, suporte a múltiplas visões e independência de aplicação.
+
+15 -  Existem 3 níveis:
+         * Nível externo (descreve parte do DB em que o grupo está interessado, ocultando o restante)
+         * Nível conceitual (descrição dos tipos de dados, entidades, relacionamentos, restrições e operações de usuário)
+         * Nível interno (descrição do armazenamento e do caminho de dados).
+
+16 - Mapeamento é a transformação de requisições e resultados entre níveis
+
+17 - A independência de dados é a capacidade de se alterar o esquema de um nível sem alterar o esquema de um nível superior.
+
+18 - Linguagens de banco de dados são linguagens (VDL, DDL, SDL e DML) que provém as ferramentas para realizar operações no BD.
+
+19 - No SQL, que é um dos mais populares, pode ser utilizado MySQL, Postgres e SQLite.

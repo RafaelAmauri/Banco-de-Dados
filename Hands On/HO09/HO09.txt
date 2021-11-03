@@ -1,0 +1,71 @@
+
+
+Fatores de bloco:
+
+2 KB = 2048 B
+
+
+Atores:
+Tamanho      = 176 B
+Blocagem     = 2048   / 176 = 11
+Nº de blocos = 10.000 / 11  = 910
+Espaço desperdiçado = 2048 - (11x176) = 112 B
+Consumo de espaço = 910 x 2KB = 1820 KB
+
+=================
+
+Clientes:
+Tamanho      = 400 B
+Blocagem     = 2048 / 400  = 5
+Nº de blocos = 100.000 / 5 = 20.000
+Espaço desperdiçado = 2048 - (5x400) = 48 B
+Consumo de espaço = 20.000 x 2KB = 40.000
+
+================
+Filme:
+Tamanho      = 256 B
+Blocagem     = 2048 / 256    =  8
+Nº de blocos = 2.000.000 / 8 = 250.000
+Espaço desperdiçado = 2048 - (8x256) = 0 B
+Consumo de espaço = 250.000 x 2KB = 500.000KB
+
+=================
+Funcionarios:
+Tamanho      = 182 B
+Blocagem     = 2048 / 182 = 11
+Nº de blocos = 3.500 / 11 = 319
+Espaço desperdiçado = 2048 - (11x182) = 46 B
+Consumo de espaço = 319 x 2KB = 638 KB
+
+=================
+Midias:
+Tamanho      = 72 B
+Blocagem     = 2048 / 72 = 28
+Nº de blocos = 10.000.000 / 28 = 357.143
+Espaço desperdiçado = 2048 - (28x72) = 32 B
+Consumo de espaço = 357.143 x 2KB = 714.286 KB
+
+=================
+Aluguel:
+Tamanho      = 92 B
+Blocagem     = 2048 / 92 = 22
+Nº de blocos = 20.000.000 / 22 = 909.091
+Espaço desperdiçado = 2048 - (22x92) = 24 B
+Consumo de espaço = 909.091 x 2KB = 1.818.182 KB
+
+=================
+Pagamentos:
+Tamanho      = 131 B
+Blocagem     = 2048 / 131 = 15
+Nº de blocos = 50.000.000 / 15 = 3.333.334
+Espaço desperdiçado = 2048 - (15x131) = 83 B
+Consumo de espaço = 3.333.334 x 2KB = 6.666.668 KB
+
+=================
+Atores em filme:
+Tamanho      = 32 B
+Blocagem     = 2048 / 32 = 64
+Nº de blocos = 1.000.000 / 64 = 15.625
+Espaço desperdiçado = 2048 - (64x32) = 0 B
+Consumo de espaço = 15.625 x 2KB = 31.250 KB
+

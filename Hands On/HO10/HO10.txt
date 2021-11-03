@@ -1,0 +1,84 @@
+
+
+Fatores de bloco:
+
+2 KB = 2048 B
+
+Índice de Atores:
+Tamanho      = 32 B
+Blocagem     = 2048   / 32  = 64
+Nº de blocos = 10.000 / 64  = 157
+Espaço desperdiçado = 2048 - (32x64) = 0 B
+Consumo de espaço = 157 x 2KB = 314 KB
+Acessos = 8
+
+=================
+
+Índice de Clientes:
+Tamanho      = 27 B
+Blocagem     = 2048 / 27  = 75
+Nº de blocos = 100.000 / 75 = 1334
+Espaço desperdiçado = 2048 - (75x27) = 23 B
+Consumo de espaço = 20.000 x 2KB = 2668 KB
+Acessos = 11
+ 
+================
+
+Índice de Filme:
+Tamanho      = 32 B
+Blocagem     = 2048 / 32      =  64
+Nº de blocos = 2.000.000 / 64 = 31250
+Espaço desperdiçado = 2048 - (32x64) = 0 B
+Consumo de espaço = 31250 x 2KB = 62500 KB
+Acessos = 15
+ 
+=================
+
+Índice de Funcionarios:
+Tamanho      = 27 B
+Blocagem     = 2048  / 27 = 75
+Nº de blocos = 3.500 / 75 = 47
+Espaço desperdiçado = 2048 - (75x27) = 23 B
+Consumo de espaço = 47 x 2KB = 94 KB
+Acessos = 6
+ 
+=================
+
+Índice de Midias:
+Tamanho      = 40 B
+Blocagem     = 2048 / 40 = 51
+Nº de blocos = 10.000.000 / 51 = 196.079
+Espaço desperdiçado = 2048 - (51x40) = 8 B
+Consumo de espaço = 196.079 x 2KB = 392.158 KB
+Acessos = 18
+
+=================
+
+Índice de Aluguel:
+Tamanho      = 63 B
+Blocagem     = 2048 / 63 = 32
+Nº de blocos = 20.000.000 / 32 = 625.000
+Espaço desperdiçado = 2048 - (32x63) = 32 B
+Consumo de espaço = 625.000 x 2KB = 1.250.000 KB
+Acessos = 20
+ 
+=================
+
+Índice de Pagamentos:
+Tamanho      = 64 B
+Blocagem     = 2048 / 64 = 32
+Nº de blocos = 50.000.000 / 32 = 1.562.500
+Espaço desperdiçado = 2048 - (32x64) = 0 B
+Consumo de espaço = 1.562.500 x 2KB = 3.125.000 KB
+Acessos = 21
+
+=================
+
+Índice de Atores em Filme:
+Tamanho      = 48 B
+Blocagem     = 2048 / 48 = 42
+Nº de blocos = 1.000.000 / 42 = 23.809
+Espaço desperdiçado = 2048 - (42x48) = 32 B
+Consumo de espaço = 23.809 x 2KB = 47.618 KB
+Acessos = 16
+

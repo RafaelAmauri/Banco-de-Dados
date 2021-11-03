@@ -1,0 +1,9 @@
+Especificar as seguintes consultas em álgebra relacional para recuperar os dados em um banco de dados relacional, considerando o conjunto de dados (dataset) denominado IMDB-sample disponível na calculadora RelaX (Links para um site externo.):
+
+    Projetar o primeiro nome e o último nome dos atores que são diretores;
+    Projetar o primeiro nome e o último nome dos atores que não são diretores;
+    Projetar o primeiro nome e o último nome dos atores e diretores;
+    Projetar o nome dos filmes que não são dirigidos por nenhum diretor;
+    Projetar primeiro nome e o último nome dos atores que não atuaram em pelo menos dois filmes;
+    Projetar, por gênero e ano, o número médio de filmes com menos de dois atores atuando.
+

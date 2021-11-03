@@ -1,0 +1,43 @@
+======================
+
+Query 1
+
+======================
+
+SELECT DISTINCT A.CPF, A.Nome
+FROM Funcionarios as A
+WHERE A.CPF IN (SELECT CPF_Supervisor FROM Funcionarios)
+LEFT JOIN Clientes as C ON A.CPF = C.CPF WHERE C.CPF IS NULL
+
+======================
+
+Query 2
+
+======================
+
+SELECT A.CodFilme, B.Nome
+FROM Midias A, Filmes B
+WHERE A.CodFilme = B.Codigo AND (A.Tipo = ’DVD’)
+UNION
+SELECT A.CodFilme, B.Nome
+FROM Midias A, Filmes B
+WHERE A.CodFilme = B.Codigo AND (A.Tipo = ’VHS’)
+
+======================
+
+Query 3
+
+======================
+
+SELECT * INTO TEMP
+FROM Pagamentos 
+GROUP BY CPF_Cliente, ID_Midia, DataLocacao;
+
+SELECT A.CPF_Cliente, A.ID_Midia, A.DataLocacao
+FROM Aluguel A, Clientes B, TEMP C
+WHERE A.CPF_Cliente = B.CPF
+AND B.Sexo != "F"
+AND C.CPF_Cliente = A.CPF_Cliente
+AND C.ID_Midia = A.ID_Midia 
+AND C.DataLocacao = A.DataLocacao
+

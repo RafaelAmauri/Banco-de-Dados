@@ -1,0 +1,28 @@
+Apresentar a árvore de consulta inicial (não otimizada) com o parsing da consulta em ordem natural (da esquerda para a direita), a árvore de consulta inicial (não otimizada) com o parsing da consulta em ordem reversa (da direita para a esquerda), a árvore de consulta otimizada, a consulta reescrita de acordo com a árvore de consulta otimizada com o parsing da consulta em ordem natural (da esquerda para a direita), a consulta reescrita de acordo com a árvore de consulta otimizada com o parsing da consulta em ordem reversa (da direita para a esquerda) e o plano de execução da consulta otimizada para cada uma das consultas SQL apresentadas abaixo:
+
+SELECT A.CPF, A.Nome, B.Nome
+FROM Funcionarios A, Clientes B, Aluguel C, Funcionarios D
+WHERE A.CPF=B.CPF
+AND B.CPF=C.CPF_Cliente
+AND B.Sexo="M"
+AND C.ValorPagar>50
+AND A.CPF=D.CPF_Supervisor
+
+ 
+SELECT A.Nome, C.Nome
+FROM Filmes A, AtoresEmFilmes B, Atores C, Midias D
+WHERE A.Codigo=B.CodFilme
+AND B.CodAtor=C.Codigo
+AND A.Genero="Aventura"
+AND A.Codigo=D.CodFilme
+AND D.PrecoDiaria>10
+
+ 
+SELECT A.CPF, A.Nome, B.Nome
+FROM Funcionarios A, Clientes B, Aluguel C, Pagamentos D
+WHERE A.CPF=B.CPF
+AND C.ValorPagar>100
+AND B.CPF=C.CPF_Cliente
+AND D.Valor<50
+AND A.CPF_Supervisor IS NULL
+AND A.CPF=C.CPF_Funcionario 

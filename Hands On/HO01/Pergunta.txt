@@ -1,0 +1,21 @@
+Responder as seguintes perguntas:
+
+    O que é um sistema de banco de dados (SBD)?
+    Do que um SBD é composto?
+    Como usuários e aplicações interagem com um SBD?
+    O que é um banco de dados (BD)? Cite um exemplo de um BD, indicando o link onde seja possível encontrá-lo.
+    Quais são as propriedades de um BD?
+    Quais são as etapas de um projeto de BD?
+    O que é um sistema gerenciador de banco de dados (SGBD)?
+    Quais são as propriedades de um SGBD?
+    Indique situações em que o uso de SGBD pode se mostrar inadequado.
+    O que é um modelo de dados? 
+    Em relação ao nível de abstração, quais são os tipos de modelos de dados?
+    O que é um Esquema de BD?
+    O que é uma Instância de BD?
+    Quais as vantagens de se adotar uma Arquitetura de Três Esquemas para implementar um BD?
+    Quais níveis existem em uma Arquitetura de Três Esquemas?
+    O que é Mapeamento em uma Arquitetura de Três Esquemas?
+    O que é Independência de Dados e qual sua importância para um SBD?
+    O que é uma Linguagem de Consulta?
+    Cite as linguagens incorporadas na linguagem SQL.

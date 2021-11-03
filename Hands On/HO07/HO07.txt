@@ -1,0 +1,78 @@
+Questão 1:
+
+SELECT first_name,last_name 
+FROM actors 
+WHERE gender = 'F'
+
+============================================================
+
+Questão 2:
+
+SELECT name 
+FROM movies 
+WHERE year>1999
+
+============================================================
+
+Questão 3:
+
+SELECT name, first_name, last_name 
+FROM ( 
+	SELECT name, director_id 
+	FROM movies NATURAL JOIN movies_directors 
+	WHERE id=movie_id) as table_1 
+NATURAL JOIN directors 
+WHERE id=director_id
+
+============================================================
+
+Questão 4:
+
+SELECT name, first_name, role 
+FROM ( 
+	SELECT first_name, last_name, movie_id, role 
+	FROM actors NATURAL JOIN roles WHERE id=actor_id) 
+as table_1 
+NATURAL JOIN movies 
+WHERE movie_id=id 
+AND rank > 6
+
+=============================================================
+
+Questão 5:
+
+SELECT first_name, last_name, n 
+FROM (
+	SELECT director_id , COUNT(movie_id) as n
+	FROM movies_directors 
+GROUP BY director_id) 
+as table_1 
+NATURAL JOIN directors 
+WHERE id=director_id
+
+============================================================
+
+Questão 6: 
+
+SELECT genre, n 
+FROM (
+	SELECT genre , COUNT(movie_id) as n
+	FROM movies_genres
+GROUP BY genre) 
+as table_1 
+
+============================================================
+
+Questão 7:
+
+SELECT genre, a, mn, ma 
+FROM (
+	SELECT genre , AVG(rank) as a, MIN(rank) as mn, MAX(rank) as ma 
+	FROM (
+		SELECT genre, rank 
+		FROM movies_genres 
+		NATURAL JOIN movies 
+		WHERE movie_id=id
+	) as table_2
+GROUP BY genre) 
+as table_1
