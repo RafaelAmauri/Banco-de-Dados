@@ -1,6 +1,6 @@
 ## Banco de Dados - BD
 
-Aqui se encontram todos meus arquivos para a matéria Banco de Dados.
+Aqui se encontram todos meus arquivos para a matéria Banco de Dados com o professor Wladmir Cardoso Brandão.
 
 Meus códigos inteiros ou trechos deles podem ser usados por todos, sem restrições. Tenha em mente que eu **NÃO** me responsabilizo por possíveis acusações de plágio ou cola, sejam elas por parte da PUC-MG ou qualquer outra instituição/pessoa.
 
